@@ -4,7 +4,7 @@
 ![AIOHTTP](https://img.shields.io/badge/AIOHTTP-2C5BB4?style=for-the-badge&logo=aiohttp&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-[![GitHub license](https://img.shields.io/badge/LICENSE-BSD--3--CLAUSE-GREEN?style=for-the-badge)](https://github.com/elliotwutingfeng/GovSGTrustedSites/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/badge/LICENSE-BSD--3--CLAUSE-GREEN?style=for-the-badge)](LICENSE)
 [![scraper](https://img.shields.io/github/workflow/status/elliotwutingfeng/GovSGTrustedSites/scraper?label=SCRAPER&style=for-the-badge)](https://github.com/elliotwutingfeng/GovSGTrustedSites/actions/workflows/scraper.yml)
 
 Machine-readable `.txt` allowlist of trusted site URLs from the [Government of Singapore](https://www.gov.sg/trusted-sites) website, updated once a day.
