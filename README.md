@@ -6,6 +6,7 @@
 
 [![GitHub license](https://img.shields.io/badge/LICENSE-BSD--3--CLAUSE-GREEN?style=for-the-badge)](LICENSE)
 [![scraper](https://img.shields.io/github/workflow/status/elliotwutingfeng/GovSGTrustedSites/scraper?label=SCRAPER&style=for-the-badge)](https://github.com/elliotwutingfeng/GovSGTrustedSites/actions/workflows/scraper.yml)
+<img src="https://img.shields.io/tokei/lines/github/elliotwutingfeng/GovSGTrustedSites?label=Total%20Allowlist%20URLS&style=for-the-badge" alt="Total Allowlist URLs"/>
 
 Machine-readable `.txt` allowlist of trusted site URLs from the [Government of Singapore](https://www.gov.sg/trusted-sites) website, updated once a day.
 
