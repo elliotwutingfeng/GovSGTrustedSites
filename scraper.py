@@ -150,7 +150,7 @@ async def extract_urls() -> set[str]:
         endpoint: str = "https://www.gov.sg/trusted-sites"
         main_page = (await get_async([endpoint]))[endpoint]
 
-        if main_page != "":
+        if main_page != b"{}":
             only_table_tags = SoupStrainer("table", {"class": lambda L: "table" in L.split()})
             soup = BeautifulSoup(main_page, "lxml", parse_only=only_table_tags)
             tbodies = soup.find_all("tbody")
