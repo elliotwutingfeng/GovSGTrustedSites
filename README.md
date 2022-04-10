@@ -15,6 +15,7 @@ The URLs in this allowlist are compiled by the **Government of Singapore**.
 **Disclaimer:** _This project is not sponsored, endorsed, or otherwise affiliated with the Government of Singapore._
 
 ## Allowlist download
+
 You may download the allowlist [here](govsg-trusted-sites.txt?raw=1)
 
 ## Requirements
