@@ -4,9 +4,9 @@ ces.ncpg.org.sg
 corp.nhg.com.sg
 ectc.org.sg
 fulcrum.sg
-icis-services.ncpg.org.sg
 info.bbdc.sg
 ingeus.com.sg
+readingnation.nlb.gov.sg
 rpace.floralms.com
 sce.org.sg
 srsc.org.sg
@@ -14,7 +14,6 @@ ssdcl.com.sg
 switchsg.org
 taxacademy.sg
 wctc.org.sg
-wis.asmc.asean.org
 wogaa.sg
 www.a-list.sg
 www.aas.com.sg
@@ -34,7 +33,6 @@ www.bilingualism.sg
 www.btptc.org.sg
 www.caretogobeyond.sg
 www.ccktc.org.sg
-www.cgh.com.sg
 www.chas.sg
 www.commonspaces.sg
 www.cosem.org.sg
@@ -69,10 +67,8 @@ www.moht.com.sg
 www.mptc.org.sg
 www.myactivesg.com
 www.myttc.org.sg
-www.nationalreadingmovement.sg
 www.ncada.org.sg
 www.ncis.com.sg
-www.ncpc.org.sg
 www.ncpg.org.sg
 www.ndcs.com.sg
 www.nfec.org.sg
@@ -86,7 +82,6 @@ www.nsc.com.sg
 www.nstc.org.sg
 www.ntfgh.com.sg
 www.nucohs.com.sg
-www.nuh.com.sg
 www.nuhcs.com.sg
 www.nuhs.edu.sg
 www.nup.com.sg
@@ -109,7 +104,6 @@ www.singaporememory.sg
 www.singaporewritersfestival.com
 www.singhealth.com.sg
 www.siww.com.sg
-www.skh.com.sg
 www.sktc.sg
 www.sleb.sg
 www.smw.sg
@@ -120,14 +114,12 @@ www.stee-rems.com.sg
 www.sysnmh.org.sg
 www.tal.sg
 www.tampines.org.sg
-www.taxacademy.sg
 www.teamsingapore.sg
-www.tptc.org.sg/www
+www.tptc.org.sg
 www.ttsh.com.sg
 www.visitsingapore.com
 www.worldcitiessummit.com.sg
 www.yishuncommunityhospital.com.sg
 www.youthactionplan.sg
 www.yri.com.sg
-yoco.sg
 youthconvo.sg
