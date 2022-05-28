@@ -1,6 +1,5 @@
 aseangeospatial.org
 asmc.asean.org
-ces.ncpg.org.sg
 corp.nhg.com.sg
 ectc.org.sg
 fulcrum.sg
@@ -36,14 +35,10 @@ www.ccktc.org.sg
 www.chas.sg
 www.commonspaces.sg
 www.cosem.org.sg
-www.egazette.com.sg
 www.elitigation.sg
 www.embracingparenthood.sg
 www.facsmab.org
 www.familiesforlife.sg
-www.geospatial.sg
-www.geoworks.sg
-www.gillmanbarracks.com
 www.hbptc.org.sg
 www.healthcarescholarships.sg
 www.healthhub.sg
@@ -60,7 +55,6 @@ www.kkh.com.sg
 www.ktph.com.sg
 www.lumihealth.sg
 www.m3.sg
-www.maximussingapore.sg
 www.mconline.sg
 www.mohh.com.sg
 www.moht.com.sg
@@ -110,7 +104,6 @@ www.smw.sg
 www.snec.com.sg
 www.sntc.org.sg
 www.sportsync.sg
-www.stee-rems.com.sg
 www.sysnmh.org.sg
 www.tal.sg
 www.tampines.org.sg
