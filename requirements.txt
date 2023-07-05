@@ -3,7 +3,7 @@ bandit==1.7.5
 beautifulsoup4==4.12.2
 black==23.3.0
 cchardet==2.1.7
-lxml==4.9.2
+lxml==4.9.3
 more-itertools==9.1.0
 mypy==1.4.1
 mypy-extensions==1.0.0
