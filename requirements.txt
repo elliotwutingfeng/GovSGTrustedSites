@@ -7,4 +7,4 @@ lxml==5.2.2
 more-itertools==10.3.0
 mypy==1.10.1
 mypy-extensions==1.0.0
-pylint==3.2.4
+pylint==3.2.5
