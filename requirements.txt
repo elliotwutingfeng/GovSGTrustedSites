@@ -5,6 +5,6 @@ black==24.4.2
 cchardet==2.1.7
 lxml==5.2.2
 more-itertools==10.3.0
-mypy==1.11.0
+mypy==1.11.1
 mypy-extensions==1.0.0
 pylint==3.2.6
