@@ -1,4 +1,4 @@
-"""Extracts trusted site URLs found at www.gov.sg/trusted-sites and writes them to a
+"""Extract trusted site URLs found at www.gov.sg/trusted-sites and write them to a
 .txt allowlist
 """
 import asyncio
@@ -8,7 +8,7 @@ import socket
 import datetime
 
 import aiohttp
-import cchardet  # type: ignore
+import tldextract
 from bs4 import BeautifulSoup, SoupStrainer
 from more_itertools import flatten
 
@@ -121,7 +121,7 @@ def current_datetime_str() -> str:
 
 def clean_url(url: str) -> str:
     """Remove zero width spaces, leading/trailing whitespaces, trailing slashes,
-    and URL prefixes from a URL
+    and URL prefixes from a URL. Also remove "www" subdomain, if any.
 
     Args:
         url (str): URL
@@ -133,10 +133,10 @@ def clean_url(url: str) -> str:
     removed_zero_width_spaces = re.sub(r"[\u200B-\u200D\uFEFF]", "", url)
     removed_leading_and_trailing_whitespaces = removed_zero_width_spaces.strip()
     removed_trailing_slashes = removed_leading_and_trailing_whitespaces.rstrip("/")
-    removed_https = re.sub(r"^[Hh][Tt][Tt][Pp][Ss]:\/\/", "", removed_trailing_slashes)
-    removed_http = re.sub(r"^[Hh][Tt][Tt][Pp]:\/\/", "", removed_https)
+    ext = tldextract.extract(removed_trailing_slashes)
+    removed_scheme = ext.registered_domain if ext.subdomain == "www" else ext.fqdn
 
-    return removed_http
+    return removed_scheme
 
 
 async def extract_urls() -> set[str]:
@@ -173,7 +173,7 @@ if __name__ == "__main__":
     if not urls:
         raise ValueError("Failed to scrape URLs")
     timestamp: str = current_datetime_str()
-    filename = "govsg-trusted-sites.txt"
+    filename = "allowlist.txt"
     with open(filename, "w") as f:
         f.writelines("\n".join(sorted(urls)))
         logger.info("%d URLs written to %s at %s", len(urls), filename, timestamp)
