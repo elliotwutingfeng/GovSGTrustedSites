@@ -1,5 +1,6 @@
 aas.com.sg
 activehealth.sg
+activesgcircle.gov.sg
 ah.com.sg
 ahtc.sg
 aic.sg
@@ -38,12 +39,10 @@ jrtc.org.sg
 kkh.com.sg
 ktph.com.sg
 lumihealth.sg
-mconline.sg
 mlc.sg
 mohh.com.sg
 moht.com.sg
 mptc.org.sg
-myactivesg.com
 myttc.org.sg
 ncada.org.sg
 ncis.com.sg
@@ -53,6 +52,7 @@ ndcs.com.sg
 nfec.org.sg
 nhcs.com.sg
 nhgp.com.sg
+nlb.gov.sg
 nni.com.sg
 npcc.org.sg
 ns.gov.sg
@@ -60,6 +60,7 @@ nsc.com.sg
 nstc.org.sg
 ntfgh.com.sg
 nucohs.com.sg
+nuh.com.sg
 nuhcs.com.sg
 nuhs.edu.sg
 nup.com.sg
@@ -69,8 +70,7 @@ publichygienecouncil.sg
 rpace.floralms.com
 safesport.sg
 sbtc.org.sg
-scamalert.sg
-scamshield.org.sg
+scamshield.gov.sg
 sce.org.sg
 searado.com
 sentosa.com.sg
@@ -79,7 +79,6 @@ sgenable.sg
 sgh.com.sg
 sgwomenintech.sg
 siird.com
-singaporememories.gov.sg
 singaporewritersfestival.com
 singhealth.com.sg
 siww.com.sg
@@ -107,5 +106,4 @@ wctc.org.sg
 worldcitiessummit.com.sg
 www.sg
 yishuncommunityhospital.com.sg
-youthactionplan.sg
 yri.com.sg
