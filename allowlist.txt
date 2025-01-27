@@ -21,9 +21,12 @@ cosem.org.sg
 ectc.org.sg
 elitigation.sg
 familiesforlife.sg
+for.edu.sg
+for.sg
 forwardsingapore.gov.sg
 fulcrum.sg
 globalfinancialgovernance.org
+go.gov.sg
 hbptc.org.sg
 healthcarescholarships.sg
 healthhub.sg
@@ -71,6 +74,7 @@ rpace.floralms.com
 safesport.sg
 sbtc.org.sg
 scamshield.gov.sg
+scamshield.org.sg
 sce.org.sg
 searado.com
 sentosa.com.sg
@@ -87,7 +91,6 @@ sktc.sg
 sleb.sg
 smw.sg
 snec.com.sg
-sntc.org.sg
 sportsync.sg
 srsc.org.sg
 ssdcl.com.sg
