@@ -1,16 +1,17 @@
 """Extract trusted site URLs found at www.gov.sg/trusted-sites and write them to a
 .txt allowlist
 """
+
 import asyncio
+import datetime
 import logging
 import re
 import socket
-import datetime
 
 import aiohttp
 import tldextract
 from bs4 import BeautifulSoup, SoupStrainer
-from more_itertools import flatten
+from fake_useragent import UserAgent
 
 logger = logging.getLogger()
 logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -21,6 +22,7 @@ default_headers: dict = {
     "Connection": "keep-alive",
     "Cache-Control": "no-cache",
     "Accept": "*/*",
+    "User-Agent": UserAgent().chrome,
 }
 
 
@@ -43,7 +45,9 @@ class KeepAliveClientRequest(aiohttp.client_reqrep.ClientRequest):
         return await super().send(conn)
 
 
-async def backoff_delay_async(backoff_factor: float, number_of_retries_made: int) -> None:
+async def backoff_delay_async(
+    backoff_factor: float, number_of_retries_made: int
+) -> None:
     """Asynchronous time delay that exponentially increases with `number_of_retries_made`
 
     Args:
@@ -71,7 +75,9 @@ async def get_async(
     if headers is None:
         headers = default_headers
 
-    async def gather_with_concurrency(max_concurrent_requests: int, *tasks) -> dict[str, bytes]:
+    async def gather_with_concurrency(
+        max_concurrent_requests: int, *tasks
+    ) -> dict[str, bytes]:
         semaphore = asyncio.Semaphore(max_concurrent_requests)
 
         async def sem_task(task):
@@ -91,8 +97,12 @@ async def get_async(
                     return (url, await response.read())
             except Exception as error:
                 errors.append(repr(error))
-                logger.warning("%s | Attempt %d failed", error, number_of_retries_made + 1)
-                if number_of_retries_made != max_retries - 1:  # No delay if final attempt fails
+                logger.warning(
+                    "%s | Attempt %d failed", error, number_of_retries_made + 1
+                )
+                if (
+                    number_of_retries_made != max_retries - 1
+                ):  # No delay if final attempt fails
                     await backoff_delay_async(1, number_of_retries_made)
         logger.error("URL: %s GET request failed! Errors: %s", url, errors)
         return (url, b"{}")  # Allow json.loads to parse body if request fails
@@ -121,13 +131,13 @@ def current_datetime_str() -> str:
 
 def clean_url(url: str) -> str:
     """Remove zero width spaces, leading/trailing whitespaces, trailing slashes,
-    and URL prefixes from a URL. Also remove "www" subdomain, if any.
+    and URL prefixes from a URL. Also remove "www" subdomain, if any. Finally, set to lowercase.
 
     Args:
         url (str): URL
 
     Returns:
-        str: URL without zero width spaces, leading/trailing whitespaces, trailing slashes,
+        str: Lowercase URL without zero width spaces, leading/trailing whitespaces, trailing slashes,
     and URL prefixes
     """
     removed_zero_width_spaces = re.sub(r"[\u200B-\u200D\uFEFF]", "", url)
@@ -135,8 +145,9 @@ def clean_url(url: str) -> str:
     removed_trailing_slashes = removed_leading_and_trailing_whitespaces.rstrip("/")
     ext = tldextract.extract(removed_trailing_slashes)
     removed_scheme = ext.registered_domain if ext.subdomain == "www" else ext.fqdn
+    lower_case = removed_scheme.lower()
 
-    return removed_scheme
+    return lower_case
 
 
 async def extract_urls() -> set[str]:
@@ -151,15 +162,12 @@ async def extract_urls() -> set[str]:
         main_page = (await get_async([endpoint]))[endpoint]
 
         if main_page != b"{}":
-            only_table_tags = SoupStrainer("table", {"class": lambda L: "table" in L.split()})
-            soup = BeautifulSoup(main_page, "lxml", parse_only=only_table_tags)
-            tbodies = soup.find_all("tbody")
+            only_p_tags = SoupStrainer("p")
+            soup = BeautifulSoup(main_page, "lxml", parse_only=only_p_tags)
+            anchors = soup.find_all("a", {"target": "_blank"})
             # Remove zero width spaces, whitespaces, trailing slashes, and URL prefixes
-            urls = (
-                (clean_url(a.attrs.get("href", "")) for a in tbody.findChildren("a"))
-                for tbody in tbodies
-            )
-            return set(flatten(urls)) - set(("",))
+            urls = (clean_url(a.attrs.get("href", "")) for a in anchors)
+            return set(urls) - set(("",))
         else:
             logger.error("Trusted sites page content not accessible")
             return set()
