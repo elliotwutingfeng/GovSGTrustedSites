@@ -8,4 +8,4 @@ more-itertools==10.6.0
 mypy==1.15.0
 mypy-extensions==1.0.0
 pylint==3.3.6
-tldextract==5.1.3
+tldextract==5.2.0
