@@ -2,7 +2,7 @@ aiohttp==3.11.16
 bandit==1.8.3
 beautifulsoup4==4.13.3
 black==25.1.0
-fake-useragent==2.1.0
+fake-useragent==2.2.0
 lxml==5.3.2
 more-itertools==10.6.0
 mypy==1.15.0
