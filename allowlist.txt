@@ -8,7 +8,6 @@ amktc.org.sg
 artweek.sg
 aseangeospatial.org
 aseanip.org
-aseanlibrary.org
 asiatechxsg.com
 asmc.asean.org
 bilingualism.sg
@@ -41,7 +40,6 @@ jch.com.sg
 jrtc.org.sg
 kkh.com.sg
 ktph.com.sg
-lumihealth.sg
 mlc.sg
 mohh.com.sg
 moht.com.sg
@@ -82,7 +80,6 @@ sfemc.org
 sgenable.sg
 sgh.com.sg
 sgwomenintech.sg
-siird.com
 singaporewritersfestival.com
 singhealth.com.sg
 siww.com.sg
@@ -91,6 +88,7 @@ sktc.sg
 sleb.sg
 smw.sg
 snec.com.sg
+sntc.org.sg
 sportsync.sg
 srsc.org.sg
 ssdcl.com.sg
