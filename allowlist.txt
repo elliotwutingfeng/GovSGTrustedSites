@@ -72,7 +72,6 @@ rpace.floralms.com
 safesport.sg
 sbtc.org.sg
 scamshield.gov.sg
-scamshield.org.sg
 sce.org.sg
 searado.com
 sentosa.com.sg
@@ -101,6 +100,7 @@ taxacademy.sg
 teamsingapore.sg
 tptc.org.sg
 tradetrust.io
+trustplatform.sg
 ttsh.com.sg
 visitsingapore.com
 wctc.org.sg
