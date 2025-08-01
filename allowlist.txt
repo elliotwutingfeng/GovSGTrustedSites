@@ -38,7 +38,8 @@ ingeus.com.sg
 ipi-singapore.org
 jbtc.org.sg
 jch.com.sg
-jrtc.org.sg
+jktc.org.sg
+jrbbtc.org.sg
 kkh.com.sg
 ktph.com.sg
 mlc.sg
