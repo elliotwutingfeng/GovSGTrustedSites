@@ -17,6 +17,7 @@ ccktc.org.sg
 chas.sg
 corp.nhg.com.sg
 cosem.org.sg
+digitalgateway.sg
 dsta.x0pa.ai
 ectc.org.sg
 elitigation.sg
@@ -43,10 +44,10 @@ jktc.org.sg
 jrbbtc.org.sg
 kkh.com.sg
 ktph.com.sg
+mbtc.org.sg
 mlc.sg
 mohh.com.sg
 moht.com.sg
-mptc.org.sg
 myttc.org.sg
 ncada.org.sg
 ncis.com.sg
