@@ -144,7 +144,9 @@ def clean_url(url: str) -> str:
     removed_leading_and_trailing_whitespaces = removed_zero_width_spaces.strip()
     removed_trailing_slashes = removed_leading_and_trailing_whitespaces.rstrip("/")
     ext = tldextract.extract(removed_trailing_slashes)
-    removed_scheme = ext.registered_domain if ext.subdomain == "www" else ext.fqdn
+    removed_scheme = (
+        ext.top_domain_under_public_suffix if ext.subdomain == "www" else ext.fqdn
+    )
     lower_case = removed_scheme.lower()
 
     return lower_case
@@ -164,7 +166,7 @@ async def extract_urls() -> set[str]:
         if main_page != b"{}":
             only_p_tags = SoupStrainer("p")
             soup = BeautifulSoup(main_page, "lxml", parse_only=only_p_tags)
-            anchors = soup.find_all("a", {"target": "_blank"})
+            anchors = soup.find_all("a", {"target": ("_self", "_blank")})
             # Remove zero width spaces, whitespaces, trailing slashes, and URL prefixes
             urls = (clean_url(a.attrs.get("href", "")) for a in anchors)
             return set(urls) - set(("",))
