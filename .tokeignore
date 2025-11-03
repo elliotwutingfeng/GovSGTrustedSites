@@ -2,5 +2,6 @@
 LICENSE
 README.md
 renovate.json
-requirements.txt
 scraper.py
+pyproject.toml
+uv.lock
