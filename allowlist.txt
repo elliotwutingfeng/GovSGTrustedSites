@@ -96,7 +96,7 @@ sleb.sg
 smw.sg
 snec.com.sg
 sntc.org.sg
-sportsync.sg
+sportsync.gov.sg
 srsc.org.sg
 ssdcl.com.sg
 switchsg.org
